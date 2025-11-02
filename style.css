@@ -1,0 +1,348 @@
+/* ============================================================
+   RESET & GLOBAL GRID BACKGROUND
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #fafafa;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 0;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-weight: 700; }
+a { text-decoration: none; color: inherit; }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__content { flex: 1 1 400px; }
+.hero__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  border-radius: 6px;
+  margin-right: .5rem;
+  font-weight: 600;
+  transition: transform .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--resume   { background: #a8e6cf; }
+.btn--projects { background: #b28fce; }
+.btn--contact  { background: #ff8b94; color: #fff; }
+.btn--primary  { background: #4a90e2; color: #fff; }
+
+/* ============================================================
+   ABOUT – CITIES
+   ============================================================ */
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.city-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+.city-card img { width: 100%; height: 100%; object-fit: cover; }
+.city-card span {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  padding: .4rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.edu-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.edu-card img {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.edu-card .info h3 { margin: 0; font-size: 1.1rem; }
+.edu-card .info .degree { font-size: .95rem; color: #555; }
+.edu-card .info .date { font-size: .85rem; color: #777; }
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.skill-badge {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  margin: .2rem;
+}
+
+/* ============================================================
+   RESEARCH
+   ============================================================ */
+.pub-card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+.pub-card h3 { margin: 0 0 .4rem; font-size: 1.15rem; }
+.pub-card .venue { color: #0066cc; font-size: .9rem; }
+.pub-card .links { margin-top: .5rem; font-size: .85rem; color: #555; }
+.pub-card .links a { margin-right: .8rem; }
+
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
+.exp-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.exp-card .logo {
+  width: 40px; height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.exp-card h3 { margin-bottom: .3rem; }
+.exp-card .date { font-size: .9rem; color: #777; margin-bottom: .5rem; }
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.proj-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+.proj-card img { width: 100%; height: 180px; object-fit: cover; }
+.proj-card .content { padding: 1rem; }
+.proj-card h3 { margin: 0 0 .4rem; }
+.proj-card .tags { margin-top: .6rem; font-size: .8rem; color: #666; }
+.proj-card .tags span { margin-right: .4rem; }
+.proj-card .links { margin-top: .8rem; }
+.proj-card .links a { margin-right: .8rem; font-size: .85rem; }
+
+/* ============================================================
+   HACKATHONS
+   ============================================================ */
+.hack-card {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 2rem;
+}
+.hack-card::before {
+  content: attr(data-letter);
+  position: absolute;
+  left: 0; top: 0;
+  width: 2rem; height: 2rem;
+  background: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.hack-card .date { font-size: .9rem; color: #777; }
+.hack-card h3 { margin: .3rem 0; display: flex; align-items: center; gap: .5rem; }
+.hack-card .badge {
+  background: #000; color: #fff;
+  padding: .1rem .5rem; border-radius: 4px; font-size: .75rem;
+}
+
+/* ============================================================
+   BOTTOM NAVIGATION
+   ============================================================ */
+.bottom-nav {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bottom-nav__inner {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.bottom-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+
+.bottom-nav a:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.bottom-nav a.active {
+  color: #0066cc;
+  background: rgba(0, 102, 204, 0.1);
+}
+
+.bottom-nav svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  section { padding: 3rem 1.5rem; }
+
+  /* Hero – Mobile Layout */
+  .hero {
+    flex-direction: column;
+    text-align: left;
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+
+  .hero__content {
+    order: 2;
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+
+  .hero__photo {
+    order: 1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    align-self: flex-end;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .hero__nav .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+
+  .hero__nav .btn--resume   { background: #a8e6cf; }
+  .hero__nav .btn--projects { background: #b28fce; }
+  .hero__nav .btn--contact  { background: #ff8b94; color: #fff; }
+
+  /* Bottom Nav – Mobile */
+  .bottom-nav {
+    bottom: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .bottom-nav a {
+    width: 36px;
+    height: 36px;
+  }
+  .bottom-nav svg {
+    width: 18px;
+    height: 18px;
+  }
+}

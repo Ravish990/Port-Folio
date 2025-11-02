@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-key="title">Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1 data-key="hero.title"></h1>
+      <p data-key="hero.subtitle"></p>
+      <p data-key="hero.tagline"></p>
+      <div class="hero__nav">
+        <a href="#resume"   class="btn btn--resume"   data-key="nav.resume"></a>
+        <a href="#projects" class="btn btn--projects" data-key="nav.projects"></a>
+        <a href="#contact"  class="btn btn--contact"  data-key="nav.contact"></a>
+      </div>
+    </div>
+    <img class="hero__photo" data-key="hero.photo" src="" alt="Profile picture">
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2 data-key="about.title"></h2>
+    <p data-key="about.text"></p>
+    <div class="about__cities">
+      <h3 data-key="about.citiesTitle"></h3>
+      <p data-key="about.citiesIntro"></p>
+      <div class="city-grid" id="cityGrid"></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="education">
+    <h2 data-key="edu.title"></h2>
+    <div id="eduList"></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2 data-key="skills.title"></h2>
+    <div id="skillBadges"></div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="research">
+    <h2 data-key="research.title"></h2>
+    <div id="pubList"></div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience">
+    <h2 data-key="exp.title"></h2>
+    <div id="expList"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2 data-key="proj.title"></h2>
+    <p data-key="proj.intro"></p>
+    <div id="projList" class="proj-grid"></div>
+  </section>
+
+  <!-- HACKATHONS -->
+  <section id="hackathons" class="hackathons">
+    <h2 data-key="hack.title"></h2>
+    <p data-key="hack.intro"></p>
+    <div id="hackList"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2 data-key="contact.title"></h2>
+    <p data-key="contact.text"></p>
+    <a href="mailto:" class="btn btn--primary" data-key="contact.emailBtn"></a>
+  </section>
+
+  <!-- FLOATING BOTTOM NAV -->
+  <nav class="bottom-nav" id="bottomNav">
+    <div class="bottom-nav__inner"></div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
